@@ -6,21 +6,21 @@ import org.testng.annotations.Test;
 import com.framework.testng.api.base.ProjectHooks;
 import com.leaftaps.pages.LoginPage;
 
-public class TC002_JustLogin extends ProjectHooks{
+public class TC003_JustLogin extends ProjectHooks{
 	@BeforeTest
 	public void setValues() {
 		testcaseName = "Login";
 		testDescription ="Login to Leaftaps";
-		authors="Lakshmi";
+		authors="Ragu";
 		category ="Smoke";
 		excelFileName="Login";
 	}
 	
 	@Test(dataProvider = "fetchData")
-	public void runLogin(String username, String password) {
+	public void runLogin(String user, String pass) {
 		new LoginPage()
-		.enterUsername(username)
-		.enterPassword(password)
+		.enterUsername(user)
+		.enterPassword(pass)
 		.clickLogin();
 
 	}
