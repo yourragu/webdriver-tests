@@ -20,7 +20,7 @@ public class TC002_JustLogin extends ProjectHooks{
 	public void runLogin(String username, String password) {
 		new LoginPage()
 		.enterUsername(username)
-		.enterPassword(password)
+		.enterPassword(pwd)
 		.clickLogin();
 
 	}
